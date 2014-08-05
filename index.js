@@ -13,7 +13,7 @@ var HTML_NS =   "http://www.w3.org/1999/xhtml"
 
 function isHTMLElement (el, names) {
     if (!util.isArray(names)) names = [names];
-    return el.namespaceURI === HTML_NS && names.indexOf(el.localName.toLowerCase());
+    return el.namespaceURI === HTML_NS && names.indexOf(el.localName.toLowerCase()) > -1;
 }
 
 function escape (value, attrMode) {
