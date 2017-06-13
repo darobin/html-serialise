@@ -55,8 +55,9 @@ function serialiseNode (node, parent) {
     if (isHTMLElement(parent, rawTextElement)) return node.data;
     return escape(node.data);
   }
-  if (nt === 8) return `<!--${node.data}-->`;
   if (nt === 7) return `<?${node.target} ${node.data}>`;
+  if (nt === 8) return `<!--${node.data}-->`;
+  if (nt === 9) return serialiseChildren(node);
   if (nt === 10) return `<!DOCTYPE  ${node.name}>`;
   throw new Error('Unknown node type: ' + nt);
 }
