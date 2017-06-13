@@ -1,8 +1,13 @@
 {
-    "name":         "html-serialise"
-,   "version":      "0.0.1"
-,   "private":      true
-,   "license":      "MIT"
-,   "dependencies": {}
-,   "main":         "index.js"
+  "name": "html-serialise",
+  "version": "0.0.1",
+  "eslintConfig": {
+    "extends": "robin"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-robin": "^4.0.0"
+  },
+  "main": "index.js"
 }
